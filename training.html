@@ -72,6 +72,7 @@
             <dd>순서에 중요한 의미가 있는 목록을 이야기한다.</dd>
         </dl>
         <!--a href="./index.html"> 돌아가기</a -->
+
             <!-- strong, em(emphasise)<> b, i -->
             <strong>강한 강조</strong>
             <em>강조</em>
@@ -90,8 +91,8 @@
             2<sup>2</sup> : 제곱수, 2의 2승
             H<sub>2</sub>O : 물의 화학식
 
-            <img src="images/SSI_20180620151311.jpg" width ="100px"/> <!-- width 나 height 하나만 적기 -->
-            <img src="./images/SSI_20180620151311.jpg" height= "100px"/> <!-- 폴더, 파일명은 되도록 영문 -->
+            <img src="images/SSI_20180620151311.jpg" width ="100px"/> <!-- (width 나 height 하나만 적기) -->
+            <img src="./images/SSI_20180620151311.jpg" height= "100px"/> <!-- (폴더, 파일명은 되도록 영문) -->
 
             <style>
                 table, tr, td{
@@ -116,7 +117,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <!-- colspan 열늘이기 가로로 늘림, rowspan 행늘이기, 세로로 늘림-->
+                    <!-- colspan 열늘이기 가로로 늘림, rowspan 행늘이기 세로로 늘림-->
                     <td colspan="2">1</td> <!-- 가로로 2칸 차지함 -->
                     <td rowspan="2">2</td> <!-- 세로로 2칸 차지함 (줄을 벗어나지 않음) -->
                     <td>3</td>
@@ -156,6 +157,40 @@
     <!-- 위 표의 소스 입니다. 이를 변형하여 아래 표 처럼 바꾸어 보세요 -->
     
     <a href="./index.html"> 돌아가기</a>
-    </body>
+
+    <form>
+            <input type="text" [placeholder="아이디를 입력하세요"]>
+            <input type="password" [placeholder="패스워드를 입력하세요"]>
+
+            <input type="radio" name="bt1"/>
+            <input type="radio" name="bt1"/>
+            <input type="radio" name="bt1"/>
+            <!-- name이 동일해야함 -->            
+            <input type="radio" name="bt2"/>            
+            <input type="radio" name="bt2"/>            
+            <input type="radio" name="bt2"/>
+            
+            <input type="checkbox" />
+            <input type="checkbox" />
+            <input type="checkbox" />
+            <input type="checkbox" />
+
+            <select>
+                <option>짜장면</option>
+                <option>짬뽕</option>
+                <option>볶음밥</option>
+            </select>
+
+            <!-- 가로 3글자, 세로 5줄 정도의 크기-->
+            <textarea cols="3" raws="5"> 
+            </textarea>
+
+            <input type="button" value="버튼이름" />
+            <input type="button" value="테스트버튼" onclick="alert('테스트 버튼이 눌렸습니다.')" />
+
+            <input type="submit" calue="제출" />
+            
+        </form>
+   </body>
 
 </html>
