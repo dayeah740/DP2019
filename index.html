@@ -1,22 +1,175 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>콘텐츠 프로그래밍 사이트</title>
+        <title>Index</title>
         <!--euc-kr, utf-8 한글 인코딩-->
         <meta charset="utf-8" />    
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <style>
+        .clear { clear:both; height:0; overflow:hidden; }
+        .float_left{ float: left;}
+        .float_right{ float: right;}
+
+        body{
+            margin: 0px;
+            background-color: #FFB9B9;
+            font-family: 'Quicksand', sans-serif;
+        }
+        header{
+            background-color: #FFB9B9; 
+            width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+            padding: 15px 0px 0px 0px;
+        }
+        h1{
+            color: #F15F5F;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #CEF279;
+            padding: 12px 30px;
+            border-radius: 25px;
+            margin:0px 15px;
+        }
+        header>nav>ul{
+            padding-top: 10px;
+            padding: 0px;
+            padding-top: 10px;
+        }
+        header>nav>ul>a>li{
+                float: left;
+                list-style: none;
+                color: white;
+                padding: 0px 30px;
+            }
+        
+        h2{
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            background-color: #FFCBCB;
+            padding: 200px 0px;
+        }
+        h2:hover{
+            background-color: #FFB9B9;
+        }
+        a{
+            text-decoration: none;
+        }
+        .content_part{
+            float: left; /* 둥둥 떠니게: 왼쪽기준으로 */
+            width: 280px;
+            margin: 10px;
+        }
+        .content_part2{
+            float: left; /* 둥둥 떠니게: 왼쪽기준으로 */
+            width: 280px;
+            margin: 10px; 
+            padding: 50px 0px 0px 0px;
+        }
+        .container>section{
+            /* margin-left: 180px; */
+            width: 1200px;
+            margin-left: auto; /* 바깥여백-왼쪽: 자동 */
+            margin-right: auto; 
+        }
+        .container>section>h3{
+            color: white;
+        }
+        footer{
+            color: white;
+            width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        footer ul{
+            padding: 0px;
+        }
+        footer li{
+            color: white;
+            float: left;
+            list-style: none;
+            padding: 0px 15px;
+        }
+        footer img{
+            height: 20px;
+        }
+        .line{
+                border-bottom: solid 1px white;
+                width: 1200px;
+                margin: 0px; 
+            }
+        .line2{
+                border-top: solid 1px white;
+                width: 1200px;
+                margin: 0px; 
+            }
+        </style>
     </head>
     <body>
-            <!--<a href="./index.html">인덱스>-->
-
-            <a href="./training.html">HTML연습</a>
-            <a href="./html_part1.html">2주차</a>
-            <a href="./html5.html">HTML5</a>
-            <a href="./form.html">FORM</a>
-            <a href="./html_middle.html">중간평가</a>
-            <a href="./layout.html">레이아웃1</a>
-            <a href="./layout2.html">레이아웃2</a>
-            <a href="https://www.google.com/">구글가기</a>
-  
+        <div id="wrap">
+            <header>
+                <a href="./index.html">
+                    <h1 class="float_left">Index</h1>
+                </a>
+                <nav class="float_right">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout2.html"><li>Layout2</li></a>
+                        <a href="./layout3.html"><li>Layout3</li></a>
+                        <a href="./free_layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+                <div class="line"></div>
+            </header>
+                <!--<a href="./index.html">인덱스>-->
+                <div class="container">
+                    <section>
+                        <div class="content_part">
+                            <a href="./layout.html">
+                                <h2>Layout1</h2>
+                            </a>
+                        </div>
+                        <div class="content_part2">
+                            <a href="./layout2.html">
+                                <h2>Layout2</h2>
+                            </a>
+                        </div>
+                        <div class="content_part">
+                            <a href="./layout3.html">
+                                <h2>Layout3</h2>
+                            </a>
+                        </div>
+                        <div class="content_part2">
+                            <a href="./free_layout.html">
+                                <h2>Free Layout</h2>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>
+            <footer>
+                <div class="line2"></div>
+                <div class="float_left">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout.html"><li>Layout2</li></a>
+                        <a href="./layout.html"><li>Layout3</li></a>
+                        <a href="./layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div style="padding: 0px 0px 20px 15px;">ⓒ 2019 Kangdayae. All Right Reserved.</div>
+                </div>
+                <ul class="float_right">
+                    <li><img src="image/thumb.png" style="border-radius: 5px;"></li>
+                    <li><img src="image/logo.png"></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </footer>
+        </div>
         </body>
 </html>
 

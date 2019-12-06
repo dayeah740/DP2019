@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자유레이아웃</title>
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bebas+Neue&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bebas+Neue|Khand|Poiret+One|Ubuntu+Condensed&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet" />
+        <meta charset="utf-8"/>
+        <meta name="author" content="강다예" />
+        <meta name="keywords" content="기말평가" />
+        <style>
+            body{
+                margin: 0px;
+            }
+
+            .wrap2{
+                background-color: #FFB9B9;
+                font-family: 'Quicksand', sans-serif;
+            }
+            #hd{
+                background-color: #FFB9B9; 
+                width: 1200px;
+                margin-left: auto; 
+                margin-right: auto;
+                padding: 15px 0px 0px 0px;
+            }
+            #hd h1{
+                color: #F15F5F;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #CEF279;
+                padding: 12px 30px;
+                border-radius: 25px;
+                margin: 0px 15px;
+            }
+            #hd ul{
+                padding-top: 10px;
+                padding: 0px;
+                padding-top: 10px;
+            }
+            #hd li{
+                float: left;
+                list-style: none;
+                color: white;
+                padding: 0px 30px;
+            }
+            #ft{
+            color: white;
+            width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+            }
+            #ft ul{
+                padding: 0px;
+            }
+            #ft li{
+                color: white;
+                float: left;
+                list-style: none;
+                padding: 0px 15px;
+            }
+            #ft img{
+                height: 20px;
+            }
+
+            #header{
+                background-color: black;
+                padding: 10px 15px /* 상하 좌우 */
+            }
+            #header h1{
+                font-size: 25px;
+                font-weight: lighter;
+                font-family: 'Ubuntu Condensed', sans-serif;
+                color: white;
+                margin: 17px;
+            }
+            #main_visual{
+                background-image: url("image/900x720_2049_21.jpg");                
+                background-size: 100%; /* 가로 세로 */
+                background-repeat: no-repeat;
+                /* repeat, no-repeat, repeat-x, repeat-y */
+                background-color: black;
+                background-position: 50% 50%; /* 가로 세로 */
+
+                color: white; /* 상속 */
+                text-align: center;
+                padding: 210px 0px; /* 상하 좌우 */
+            }
+            #main_visual h2{
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 80px;
+                font-weight: normal;
+                letter-spacing: 5px;
+                margin: 5px;
+            }
+            #header>nav>ul{
+                margin: 0px;
+            }
+            #header li{
+                float: left;
+                list-style: none;
+                
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 12px;
+                color: white;
+                padding: 0px 6px;
+                margin: 23px 10px;
+            }
+            #about{
+                width: 1140px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #profile{
+                font-family: 'Noto Serif KR', serif;
+                float: left; /* 둥둥 떠니게: 왼쪽기준으로 */
+                text-align: center;
+                width: 450px;
+                padding: 150px 10px; 
+                margin: 0px 50px;
+                display: block;
+            }
+            #profile img{
+                text-align: center;
+                margin: 15px 35px 20px 35px; /* 상 우 하 좌 (위부터 시계방향) */
+            }
+            #profile dt{
+                font-size: 25px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                margin: 0px 0px 20px 0px;
+            }
+            #profile dd{
+                text-align: left;
+                font-size: 15px;
+                font-weight: lighter;
+                margin: 20px 30px;
+            }
+            #chronology{
+                font-family: 'Noto Serif KR', serif;
+                float: right;
+                width: 450px;
+                text-align: center;
+                padding: 20px 10px 20px 10px; 
+                margin: 50px 50px 20px 50px;
+                display: block;
+            }
+            #chronology ul{
+                padding: 30px 20px;
+                text-align: left;
+            }
+            #chronology li{
+                font-size: 15px;
+                list-style: square;
+                padding: 10px;
+            }
+            #index{
+                font-family: 'Archivo Black', sans-serif;
+                color: white;
+                width: 1140px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+            #index_m{
+                height: 600px;
+                background-color:black;
+            }
+            .works_list{
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("image/archi3.jpg");
+                background-size: 200%;
+                float: left;
+                width: 460px;
+                height: 460px;
+                margin: 10px 55px;
+                
+            }
+            .works_list:nth-child(2){
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),url("image/a1.jpg");
+                background-size: 25%;
+            }
+            .works_list:hover{
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+                
+                color:white;
+            }
+            a{ text-decoration:none }
+            .works_list h2{
+                color: white;
+                text-align: center;
+                font-size: 45px;
+                margin: 0px;
+                padding: 205px 0px;
+            }
+
+            #architecture{
+                font-family: 'Noto Serif KR', serif;
+                width: 1140px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                margin-bottom: 200px;
+            }
+            #architecture dt{
+                font-size: 20px;
+                font-weight: bold;    
+                text-align: center;
+            }
+            #architecture dd{
+                margin: 30px 10px 10px 10px;
+                font-size: 15px;
+            }
+            .content{
+                float: left;
+                width: 535px;
+                margin: 30px 0px 0px 0px;
+            }
+            .content img{
+                width: 535px;
+            }
+            .content_part{
+                float: left; /* 둥둥 떠니게: 왼쪽기준으로 */
+                width: 535px;
+            }
+
+            #artwork{
+                width: 1140px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 100px;
+                padding-bottom: 200px;
+            }
+            #artwork_m{
+                background-color: #D5D5D5;
+                height: 1629.72px;
+            }
+            #artwork p{
+                font-family: 'Noto Serif KR', serif;
+                font-size: 18px;
+                text-align: center;
+                padding-bottom: 40px;
+            }
+            #artwork ul{
+                padding: 0px;
+            }
+            #artwork li{
+                float: left;
+                list-style: none;
+            }
+            #artwork img{
+                display: block;
+                width:333.3px;
+                height:333.3px;
+            }
+            .work{
+                width: 333.3px;
+                padding: 0px 0px 70px 0px; 
+            }
+            .work_img{
+                position: relative;
+            }
+            .work_name{
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 24px;
+                color: white;
+
+                opacity: 0%;
+                display: inline-block;
+                position: absolute;
+                font-size: 20px;
+                text-align: center; 
+
+                bottom: 0%;
+                left: 0%;
+                background: url("image/a1.jpg");
+                width: 333.3px;
+                padding: 153.45px 0px;
+                
+            }
+            .work_name:hover{
+                opacity: 100%;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+            }
+           
+            
+
+            #footer{
+                font-family: 'Ubuntu Condensed', sans-serif;
+                font-weight: lighter;
+                font-size: 12px;
+                color: white;
+                text-align: center;
+                background-color: black;
+                padding: 20px 0px 40px 0px;
+            }
+            #footer ul{
+                font-family: 'Archivo Black', sans-serif;
+                width: 228.48px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px;
+            }
+            #footer li{
+                color: white;
+                float:left;
+                list-style:none;
+                padding: 0px 16px;
+            }
+
+            .title{
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 25px;
+                text-align: center;
+                padding: 0px;
+            }
+            .long_line{
+                border-bottom: dashed 1px #cccccc;
+                width: 450px;
+                margin: 10px 0px; /* 상하 좌우 */
+            }
+            .longline{
+                border-bottom: solid 1px #cccccc;
+                width: 100%;
+                margin-bottom: 20px; /* 상하 좌우 */
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px;
+            }
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left { float:left; }
+            .float_right { float:right; }
+            #wrap{
+               min-width: 1000px;
+               max-width: 1920px;
+               margin-left: auto;
+               margin-right: auto;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="wrap2">
+            <header id="hd">
+                <a href="./index.html">
+                    <h1 class="float_left">Index</h1>
+                </a>
+                <nav class="float_right">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout2.html"><li>Layout2</li></a>
+                        <a href="./layout3.html"><li>Layout3</li></a>
+                        <a href="./free_layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div id="wrap">
+            <div id="header">
+                <h1 class="float_left">le corbusier</h1>
+                <nav class="float_right">
+                    <ul>
+                        <a href="#header"><li>MAIN</li></a>
+                        <a href="#chronology"><li>ABOUT</li></a>
+                        <a href="#index"><li>WORKS</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+            <div id="main_visual">
+                <h2>LE CORBUSIER</h2>
+            </div>
+            <div id="about">
+                <div id="profile">
+                    <img src="image/LeCorbusier_por.png" />
+                    <dl>
+                        <dt>르 코르뷔지에</dt>
+                        <div class="long_line"></div>
+                        <dd>
+                            스위스 태생의 프랑스 건축가,   화가, 디자이너. <br />
+                            ‘인간을 위한 건축’으로 유명한 르 코르뷔지에는 
+                            혁신적이면서 합리적인 건축설계와 시대를 앞서나가는 
+                            이론으로 건축사에 큰 족적을 남긴 현대 건축의 위대한 거장이다.
+                        </dd>
+                    </dl>
+                    <div class="clear"></div>
+                </div>
+                <div id="chronology">
+                    <h2>연대기</h2>
+                    <div class="long_line"></div>
+                    <ul>
+                        <li><strong>1887</strong><br />
+                        10월 6일 스위스에서 출생.</li>
+                        <li><strong>1908-1909</strong><br />
+                        페렌 형제와의 실무 훈련: 철근 콘크리트 기술 연구.</li>
+                        <li><strong>1923</strong><br />
+                        현대 건축의 근본이 되는 [건축을 향하여] 출판.</li>
+                        <li><strong>1931</strong><br />
+                        빌라 사보아 완공.</li>
+                        <li><strong>1945</strong><br />
+                        인체의 규모에 따라 건축 비율을 설정하는 모듈러 완성.</li>
+                        <li><strong>1952</strong><br />
+                        마르세유에서 유니테 다비시타옹 완공.</li>
+                        <li><strong>1954</strong><br />
+                        퍼 미니 방문.</li>
+                        <li><strong>1955</strong><br />
+                        룽샹에서 노트르담 뒤 오트 당 예배당이 완공.</li>
+                        <li><strong>1960</strong><br />
+                        도미니카 수도원 완성.</li>
+                        <li><strong>1955-1965</strong><br />
+                        펀잡 지역의 수도 찬디 가르 (인도) 건설.</li>
+                        <li><strong>1961-1965</strong><br />
+                        Maison de la Culture 건설.</li>
+                        <li><strong>1965</strong><br />
+                        8월 27일 프랑스의 Alpes-Maritimes 지역에서 사망.</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="index_m">
+                <div id="index">
+                    <div class="works_list">
+                            <a href="#architecture"><h2>ARCHITECTURE</h2></a>
+                    </div>
+                    <div class="works_list">
+                            <a href="#artwork"><h2>ART WOKS</h2></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="architecture">
+                <div class="title">
+                    <h2>ARCHITECTURE</h2>
+                </div>
+                <section>
+                    <div class="content">
+                        <div class="content_part">
+                            <img src="image/archi1.JPG" />
+                            <dl>
+                                <dt>빌라 사보아</dt>
+                                <div class="long_line" style="width: 535px;"></div>
+                                <dd>
+                                    빌라 사부아는 프랑스 파리의 외곽인 푸아시에 있는 현대식 빌라이다. 
+                                    스위스 건축가 르코르뷔지에와 그의 사촌 피에르 장느레에 의해 
+                                    1928년부터 1931년까지 강화 콘크리트를 사용하여 지어졌다.
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="content" style="padding: 0px 0px 0px 70px;" >
+                        <div class="content_part">
+                            <img src="image/archi2.jpg" />
+                            <dl>
+                                <dt>룽샹 순례자 성당</dt>
+                                <div class="long_line" style="width: 535px;"></div>
+                                <dd>
+                                    롱샹 순례자 성당은 프랑스 보주주에 있는 건축물이다. 
+                                    근대 건축의 아버지로 불리는 르 코르뷔지에의 후기 작품들 중 하나이다. 
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="content">    
+                        <div class="content_part">
+                            <img src="image/archi3.jpg" />
+                            <dl>
+                                <dt>유니테 다비시타옹</dt>
+                                <div class="long_line" style="width: 535px;"></div>
+                                <dd>
+                                    제 2차 세계대전 이후에 설계하여 건축한 건물. 
+                                    유럽의 젊은 건축가들에게 큰 영향을 미쳤다.
+                                    유니테 다비시타옹은 거센 비판을 받기도 하였다.
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="content" style="padding: 0px 0px 0px 70px;" >
+                        <div class="content_part">
+                            <img src="image/archi4.jpg" />
+                            <dl>
+                                <dt>라투레트 수도원</dt>
+                                <div class="long_line" style="width: 535px;"></div>
+                                <dd>
+                                    르 코르뷔지에가 설계 한 가장 중요한 건물 중 하나로, 
+                                    프랑스 리옹 근처 언덕에 위치한 도미니카 수도회이다.
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+            </div>
+            <div id="artwork_m">
+                <div id="artwork">
+                    <div class="title">
+                        <h2>ART WORKS</h2>
+                    </div>
+                    <p> 르 코르뷔지에는 건축작품 외에도 다양한 작품을 남겼습니다.</p>
+                    <ul>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a1.jpg" />
+                                <div class="work_name">
+                                    Les mains, 1956
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work" style="padding: 0px 70px;">
+                            <div class="work_img">
+                                <img src="image/a2.jpg" />
+                                <div class="work_name">
+                                    Bouteille et livre rose, 1926
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a3.jpg" />
+                                <div class="work_name">
+                                    LC4, 1928
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a4.jpg" />
+                                <div class="work_name">
+                                    LC13 , 1941
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work" style="padding: 0px 70px;">
+                            <div class="work_img">
+                                <img src="image/a5.jpg" />
+                                <div class="work_name">
+                                    Panurge, 1964
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a6.jpg" />
+                                <div class="work_name">
+                                    Nature morte Vézelay, 1939
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a7.jpg" />
+                                <div class="work_name">
+                                    Yvonne Le Corbusier
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work" style="padding: 0px 70px;">
+                            <div class="work_img">
+                                <img src="image/a8.jpg" />
+                                <div class="work_name">
+                                    La main ouverte, 1955
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div class="work_img">
+                                <img src="image/a9.jpg" />
+                                <div class="work_name">
+                                    Panurge II, 1962
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer">
+                <ul>
+                    <a href="#header"><li>MAIN</li></a>
+                    <a href="#chronology"><li>ABOUT</li></a>
+                    <a href="#artwork"><li>WORKS</li></a>
+                    <div class="clear"></div>
+                </ul>
+                <div class="longline"></div>
+                <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="wrap2">
+            <footer id="ft">
+                <div class="line2"></div>
+                <div class="float_left">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout.html"><li>Layout2</li></a>
+                        <a href="./layout.html"><li>Layout3</li></a>
+                        <a href="./layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div style="padding: 0px 0px 20px 15px;">ⓒ 2019 Kangdayae. All Right Reserved.</div>
+                </div>
+                <ul class="float_right">
+                    <li><img src="image/thumb.png" style="border-radius: 5px;"></li>
+                    <li><img src="image/logo.png"></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </footer>
+        </div>
+    </body>
+    </html>

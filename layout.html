@@ -3,49 +3,102 @@
     <head>
         <title>레이아웃1</title>
         <meta charset="utf-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
         <style>
             /* div,header,nav,footer,h1,h2,ul,li{ */
                 /* margin:10px; */ /* 바깥여백:10px; */
                 /* border: solid 1px black;} */
                 /* 경계선: 실선 1px 두께 검은색; */
-            
-            header{
+            body{
+                margin: 0px;
+            }
+            .wrap2{
+                font-family: 'Quicksand', sans-serif;
+                background-color: #FFB9B9;
+            }
+            #hd{
+                background-color: #FFB9B9; 
+                width: 1200px;
+                margin-left: auto; 
+                margin-right: auto;
+                padding: 15px 0px 0px 0px;
+            }
+            #hd h1{
+                color: #F15F5F;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #CEF279;
+                padding: 12px 30px;
+                border-radius: 25px;
+                margin: 0px 15px;
+            }
+            #hd ul{
+                padding-top: 10px;
+                padding: 0px;
+                padding-top: 10px;
+            }
+            #hd li{
+                float: left;
+                list-style: none;
+                color: white;
+                padding: 0px 30px;
+            }
+            #ft{
+            color: white;
+            width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+            }
+            #ft ul{
+                padding: 0px;
+            }
+            #ft li{
+                color: white;
+                float: left;
+                list-style: none;
+                padding: 0px 15px;
+            }
+            #ft img{
+                height: 20px;
+            }
+
+            #header{
                 padding: 30px; /* padding과 margin구별 */
             }
-            nav{
+            #wrap nav{
                 padding: 30px;
             }
-            h1{
+            #wrap h1{
                 margin: 0px;
             }
-            h2{
+            #wrap rap h2{
                 margin: 0px;
             }
-            header>ul{
+            #header>ul{
                 margin-top: 10px;
                 margin-bottom: 10px; /* 실제로는 psd에서 픽셀 다 따서 지정 */
             }
             #zoom{
                 margin: 12px;
             }
-            header>ul>li{
+            #header>ul>li{
                 float:left; /* 둥둥떠다닌다: 왼쪽기준 */
                 list-style: none; /*리스트모양(동그라미): 없음 */
                 padding-left: 10px;
                 padding-right: 10px; 
                 border-right: solid 2px gray;
             }
-            header>ul>li:nth-child(5){
+            #header>ul>li:nth-child(5){
                 border:none;
             }
             .clear { clear:both; height:0; overflow:hidden; }
             .float_left{ float: left;}
             .float_right{ float: right;}
             
-            nav{
+            #wrap nav{
                 background-color: #ccc 
             }
-            nav>ul{
+            #wrap nav>ul{
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
@@ -89,15 +142,15 @@
             .container dd{
                 margin: 25px 0px; /* 바깥여백: 없음 */
             } /* float:left > clear(적절한 위치에) > list-style:none, padding > 설정하지 않은 여백지우기 */
-            footer li{
+            #footer li{
                 float:left;
                 list-style:none;
                 padding: 0px 10px;
             }
-            footer ul{
+            #footer ul{
                 padding: 0px;
             }
-            footer{
+            #footer{
                 background-color: #999;
                 padding: 30px;
             }
@@ -117,8 +170,26 @@
         </style>
     </head>
     <body>
+        <div class="wrap2">
+            <header id="hd">
+                <a href="./index.html">
+                    <h1 class="float_left">Index</h1>
+                </a>
+                <nav class="float_right">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout2.html"><li>Layout2</li></a>
+                        <a href="./layout3.html"><li>Layout3</li></a>
+                        <a href="./free_layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+                <div class="line"></div>
+            </header>
+        </div>
         <div id="wrap">
-            <header>
+            <div id="header">
                 <h1 class="float_left">
                     <img src="images/layout1_head_logo.jpg" />
                 </h1>
@@ -134,7 +205,7 @@
                     <img src="images/layout1_head_zoom.jpg" />
                 </div>
                 <div class="clear"></div>
-            </header>
+            </div>
             <nav>
                 <h2 class="float_left">
                     See Our Works
@@ -278,7 +349,7 @@
                     </section>
                 </div>
             </div>
-            <footer>
+            <div id="footer">
                 <div class="float_left">
                     <ul>
                         <li>Home</li>
@@ -305,10 +376,28 @@
                     <div class="clear"></div>
                 </ul>
                 <div class="clear"></div>       
-            </footer>
-            <div id="index">
-                <a href="./index.html" >INDEX</a>
             </div>
+        </div>
+        <div class="wrap2">
+            <footer id="ft">
+                <div class="line2"></div>
+                <div class="float_left">
+                    <ul>
+                        <a href="./layout.html"><li>Layout1</li></a>
+                        <a href="./layout.html"><li>Layout2</li></a>
+                        <a href="./layout.html"><li>Layout3</li></a>
+                        <a href="./layout.html"><li>Free Layout</li></a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div style="padding: 0px 0px 20px 15px;">ⓒ 2019 Kangdayae. All Right Reserved.</div>
+                </div>
+                <ul class="float_right">
+                    <li><img src="image/thumb.png" style="border-radius: 5px;"></li>
+                    <li><img src="image/logo.png"></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </footer>
         </div>
     </body>
 </html>
